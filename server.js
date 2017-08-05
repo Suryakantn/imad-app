@@ -5,7 +5,22 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
+var articleOne={
+    title:'Article one by sk',
+    heading:'Artcile One',
+    date:'August 5,2017',
+    content:`<p>
+                            This is what i want ,this is content to my 1st articl.This is what i want ,this is content to my 1st article
+                      </p>
+                      <p>
+                             This is what i want ,this is content to my 1st articl.This is what i want ,this is content to my 1st article.... 
+                            This is what i want ,this is content to my 1st article.... 
+                      </p>
+                      <p>
+                            This is what i want ,this is content to my 1st articl.This is what i want ,this is content to my 1st article.... 
+                            This is what i want ,this is content to my 1st article.... 
+                      </p> `
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
