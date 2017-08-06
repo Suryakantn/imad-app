@@ -5,7 +5,12 @@ element.innerHTML='New Value';
 
 //Slide image new Left side
 var img=document.getElementById('madi');
-    img.onclick=function(){
-      img.style.marginLeft='100px';  
-    };
+function moveRight(){
+    marginLeft=marginLeft+10;
+    img.style.marginLeft=marginLeft+'px';
+}
+   img.onclick=function(){
+       var interval=setInterval(moveRight,100);
+   };
+
     
